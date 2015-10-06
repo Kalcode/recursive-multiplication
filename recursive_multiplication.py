@@ -83,8 +83,8 @@ def main(x,y):
     return results
 
 #Global for test running
-X = 2456456400
-Y = 20564564540
+X = 1256456456445645645656456456422222555444444444444444444444444444444444444444444444444621655646545616456456564400
+Y = 151256456456445645645656456456422222555444444444444444444444444444444444444444444444444621655646545616456456564400
 global Results
 
 def test():
@@ -99,9 +99,10 @@ if __name__ == "__main__":
     import timeit
 
     ##Run some time test for funs
-    print(timeit.timeit("test()", setup="from __main__ import test", number= 1), "Seconds")
-    print(timeit.timeit("test2()", setup="from __main__ import test2", number= 1), "Seconds")
-
+    time1 = timeit.timeit("test()", setup="from __main__ import test", number= 1)
+    time2 = timeit.timeit("test2()", setup="from __main__ import test2", number= 1)
+    print("Recursive Multiplication: {:.25f}".format(time1), "Seconds")
+    print("Python's Multiplication:  {:.25f}".format(time2), "Seconds")
     print("Results: " + str(Results))
 
     #Double check results, throw a fit if they are wrong
